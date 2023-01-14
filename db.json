@@ -51,6 +51,58 @@
                 }
                 
             }
+        },
+        "Rock":{
+            "titulo":"Rocks",
+            "albuns":{
+                "Ac/Dc":{
+                    "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.explicit.bing.net%2Fth%3Fid%3DOIP.gDOLjh0TqESbGW62in1qSAHaHa%26pid%3DApi&f=1&ipt=e9fa0ea69d529e7d72abc0a0dca987439cd7db53f326de136a137419597bab73&ipo=images",
+                    "nome":"Ac/Dc",
+                    "legend":"Banda de rock antiga",
+                    "id":"1"
+                },"System of down":{
+                    "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.A_hvVGhop_MdcrhGxeClUwHaF7%26pid%3DApi&f=1&ipt=5761d04c84d2ce7e6339e977fece2b4927877e91d8f16831a58f08e6c0013c1f&ipo=images",
+                    "nome":"System Of Down",
+                    "legend":"Banda de rock antiga",
+                    "id":"2"
+                },"Led zepplin":{
+                    "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Amjyee28gccBon4wptGILwHaFP%26pid%3DApi&f=1&ipt=1e4fd289ad84f57869baeac001c730d4cada31f3f43230e2ecd6be72e746dc8d&ipo=images",
+                    "nome":"Led Zeppelin",
+                    "legend":"Banda de rock antiga",
+                    "id":"3"
+                },
+                "Red hot chillie pipers":{
+                    "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.Lz3jeC7_7xoGSVi9M--2HQHaHa%26pid%3DApi&f=1&ipt=fa6230299fe2ca4e5976352c7e43c98c3db6db03720319db071093117682e0a9&ipo=images",
+                    "nome":"Red Hot",
+                    "legend":"Banda de rock antiga",
+                    "id":"4"
+                },
+                "Legiao urbana":{
+                    "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.explicit.bing.net%2Fth%3Fid%3DOIP.gOCUCT9kuPEkPQ_k7dL1GwHaHX%26pid%3DApi&f=1&ipt=cf150c55af71468915e636077bcd09d6502b6fef8e8d6be11f33ca18f75391c1&ipo=images",
+                    "nome":"Legião Urbana",
+                    "legend":"Banda de rock antiga",
+                    "id":"5"
+                },
+                "Link park":{
+                    "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.CDI3bAfq1POFZxJPA0largHaFj%26pid%3DApi&f=1&ipt=93ce3d0ab20233c2ae94483d04226155d134400756dc57e29b5c705e7becfd8b&ipo=images",
+                    "nome":"Link Park",
+                    "legend":"Banda de rock antiga",
+                    "id":"6"
+                },
+                "slipknot":{
+                    "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.vG53onUEeBPPLa1Olt6RcwHaEK%26pid%3DApi&f=1&ipt=d906b9766c61a45e05e7c76af3be3db2b7a6b6962ce305beb515041868ea29d0&ipo=images",
+                    "nome":"slipknot",
+                    "legend":"Banda de rock antiga",
+                    "id":"7"
+                },
+                "bring me to horizon":{
+                    "img":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.U7XWXF9fDBa8jgLg2qvXqgHaJO%26pid%3DApi&f=1&ipt=d7e77e3004820bd621a304adccf86b910ad2cd8a8a0d818dc20ba37f638e6558&ipo=images",
+                    "nome":"Bring me to Horizon",
+                    "legend":"Banda de rock antiga",
+                    "id":"8"
+                }
+                
+            }
         }
 
     }
