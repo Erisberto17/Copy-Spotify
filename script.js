@@ -1,50 +1,30 @@
-const section = document.getElementById("musica");
-const titulo = document.querySelector("#titulo");
 
 async function getData(){
-    const res = await fetch("https://my-json-server.typicode.com/Erisberto17/Copy-Spotify/db")
-    const req = await res.json()
+    const url = "https://my-json-server.typicode.com/Erisberto17/Copy-Spotify/db"
+    const response = await fetch(url);
 
-    listas(req)
+    const requer = await response.json();
+   
+    passToList(requer)
+    
 }
-
-function listas(req){
+function passToList (catData){
+    for (const key in catData) {
+        if (Object.hasOwnProperty.call(catData, key)) {
+            const element = catData[key];
+            getAlbuns(element)
+        }
+    }
+}
+function getAlbuns(albuns){
+    console.log(albuns)
     
-    const albuns = Object.keys(req.categorias)
-    
-    const generoReq = JSON.parse(JSON.stringify(req.categorias.Rock.albuns))
-    const genero = Object.values(generoReq)
-    
-    albuns.forEach((e)=>{
-        titulo.innerText = e;
-        
-        genero.forEach((i)=>{
+    for (const key in albuns) {
+        if (Object.hasOwnProperty.call(albuns, key)) {
+            const element = albuns[key];
+            console.log(element)
             
-            const divText = document.createElement("div");        
-            const img = document.createElement("img");
-            const nome = document.createElement("p")
-            const legend = document.createElement("p")
-            const boxContainer = document.createElement("span")
-            
-            img.src = i.img;
-            nome.innerHTML = i.nome;
-            legend.innerHTML = i.legend;
-            
-            console.log(i.nome);
-            
-            divText.appendChild(nome);
-            divText.appendChild(legend);
-            boxContainer.appendChild(img);
-            boxContainer.appendChild(divText);
-            section.appendChild(boxContainer);
-            
-        })
-    })
-    boxContainer.classList.add("box-container")
-    divText.classList.add("text")
-    titulo.classList.add("titulo")
-    
-    
-
+        }
+    }
 }
 getData()
