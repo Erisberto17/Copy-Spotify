@@ -9,9 +9,16 @@ async function getData(){
 }; 
 
 function recieveData (data){
-    
+    const selecao = document.querySelector("#selecao")
     data.forEach((e) => {
-        
+        const titulo = document.createElement("h2");
+        titulo.innerText = e.titulo;
+        selecao.appendChild(titulo)
+        e.albuns.forEach((i) => {
+            console.log(i)
+        })
+
+
         console.log(e)
     });
     
