@@ -1,30 +1,26 @@
-
 async function getData(){
-    const url = "https://my-json-server.typicode.com/Erisberto17/Copy-Spotify/db"
-    const response = await fetch(url);
+    const url = "https://my-json-server.typicode.com/Erisberto17/Copy-Spotify/db";
 
-    const requer = await response.json();
-   
-    passToList(requer)
+    const response = await fetch(url);
+    const request = await response.json()
     
-}
-function passToList (catData){
-    for (const key in catData) {
-        if (Object.hasOwnProperty.call(catData, key)) {
-            const element = catData[key];
-            getAlbuns(element)
-        }
-    }
-}
-function getAlbuns(albuns){
-    console.log(albuns)
+    recieveData(request)
     
-    for (const key in albuns) {
-        if (Object.hasOwnProperty.call(albuns, key)) {
-            const element = albuns[key];
-            console.log(element)
-            
-        }
-    }
-}
+} 
+
+function recieveData(data){
+    const dataTotal = data.categorias.Rock.albuns.slipknot;
+    
+    
+    console.log(dataTotal)
+    
+    dataTotal.forEach(element => {
+        console.log(element)
+    });
+    
+
+};
+
 getData()
+
+

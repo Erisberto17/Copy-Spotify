@@ -1,6 +1,6 @@
 {
-    "categorias":{
-        "Rock":{
+    "categorias":[
+        {"Rock":{
             "titulo":"Rocks",
             "albuns":{
                 "Ac/Dc":{
@@ -51,8 +51,8 @@
                 }
                 
             }
-        },
-        "Metal":{
+        }},
+        {"Metal":{
             "titulo":"Metal",
             "albuns":{
                 "Ac/Dc":{
@@ -103,7 +103,6 @@
                 }
                 
             }
-        }
-
-    }
+        }}
+    ]
 }
