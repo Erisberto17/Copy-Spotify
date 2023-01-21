@@ -15,11 +15,31 @@ function recieveData (data){
         titulo.innerText = e.titulo;
         selecao.appendChild(titulo)
         e.albuns.forEach((i) => {
+            /*
+            const boxContainer = document.createElement("span");
+            const divText = document.createElement("div");
+            const img = document.createElement("img");
+            const pName = document.createElement("p");
+            const pLegend = document.createElement("p");
+
+            img.src = i.img
+            pName.innerText = i.nome;
+            pLegend = i.legend;
+
+            divText.appendChild(pName);
+            divText.appendChild(pLegend);
+            boxContainer.appendChild(img);
+            boxContainer.appendChild(divText);
+
+            selecao.appendChild(boxContainer)
+            */
+
             console.log(i)
+
         })
 
 
-        console.log(e)
+       
     });
     
 
