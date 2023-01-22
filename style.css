@@ -115,6 +115,9 @@ nav{
 nav .opts{
    padding-left: 20px; 
    padding-right: 45px;
+   
+}nav .opts a{
+    text-decoration: none;
 }
 nav .opts h1{
     color: rgb(239, 238, 238);
@@ -160,6 +163,9 @@ main .lista h2{
     color: whitesmoke;
     font-family:Verdana;
     font-size: 160%;
+    text-decoration:none;
+
+    
 }main .lista h2:hover{
     text-decoration: underline;
 }main .lista .divTitulo{
@@ -185,6 +191,8 @@ main section #selecao .musica{
   
 main section #selecao .musica img{
     height: 150px; width: 150px;
+    background-color: #1a1827a5;
+    border: none;
     border-radius: 5px;
     margin:0;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.418);

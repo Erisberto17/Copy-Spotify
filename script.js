@@ -28,8 +28,11 @@ function recieveData (data){
         musica.classList.add("musica")
         divTitulo.classList.add("divTitulo")
         
-        ShowAll.innerText = "MOSTRAR TUDO"
-        titulo.innerText = e.titulo;
+        setInterval(()=>{
+            ShowAll.innerText = "MOSTRAR TUDO"
+            titulo.innerText = e.titulo;
+
+        },1000)
         
         for(let i = 0; i < 4; i++){
             
@@ -39,15 +42,19 @@ function recieveData (data){
             const pName = document.createElement("p");
             const pLegend = document.createElement("p");
             
+            setInterval(()=>{
+
+                img.src = e.albuns[i].img;
+                pLegend.innerText = e.albuns[i].legend
+                pName.innerText = e.albuns[i].nome;
+            },800)
+
             musica.appendChild(boxContainer);
             boxContainer.appendChild(img);
             boxContainer.appendChild(divText);
             divText.appendChild(pName);
             divText.appendChild(pLegend);
 
-            img.src = e.albuns[i].img;
-            pName.innerText = e.albuns[i].nome;
-            pLegend.innerText = e.albuns[i].legend;
 
         }
         
@@ -61,18 +68,18 @@ function showGenero(playlist, showTitulo){
     
     clear()
 
+    
     const selecao = document.querySelector("#selecao");
     const titulo = document.createElement("h2");
     const musica = document.createElement("div")
-
-    titulo.innerHTML = showTitulo;
+    
+    setInterval(()=>{
+        titulo.innerHTML = showTitulo;
+    },850)    
 
     selecao.appendChild(titulo);
     
     playlist.forEach((element)=> {  
-
-
-        const divGenero = document.createElement("div")
         
         const boxContainer = document.createElement("span");
         const divText = document.createElement("div");
@@ -80,9 +87,12 @@ function showGenero(playlist, showTitulo){
         const pName = document.createElement("p");
         const pLegend = document.createElement("p");
 
-        img.src = element.img;
-        pName.innerText = element.nome;
-        pLegend.innerText = element.legend
+        setInterval(()=>{
+
+            img.src = element.img;
+            pLegend.innerText = element.legend
+            pName.innerText = element.nome;
+        },1000 )
         
         boxContainer.appendChild(img);
         boxContainer.appendChild(divText);
@@ -93,7 +103,8 @@ function showGenero(playlist, showTitulo){
 
         musica.classList.add("musica")
 
-    })
+    },1000)
+    window.scroll(0, 0)
     musica.style.flexWrap = "wrap"
     
 
