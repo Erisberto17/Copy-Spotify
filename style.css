@@ -66,11 +66,14 @@ main{
 main .lista{
     margin-top: 3em;
     display: flex;   
+    flex-direction: column;
     
 }
 main .lista #selecao{
     max-width: 90%;
     margin-right: 5%;
+    display: flex;
+    flex-direction: column;
 }
 main .lista h2{
     color: whitesmoke;
