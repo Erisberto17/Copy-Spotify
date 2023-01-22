@@ -12,27 +12,36 @@ function recieveData (data){
     
     const selecao = document.querySelector("#selecao");
     
+    
     data.forEach((e) => {
-
-        const musica = document.querySelector("#musica")
+        
+        const musica = document.createElement("div");
         const titulo = document.createElement("h2");
-
+        
+        selecao.appendChild(titulo);
+        selecao.appendChild(musica);
+        
+        musica.classList.add("musica")
+        
         titulo.innerText = e.titulo;
-       
+        
+        console.log("------");
+
         e.albuns.forEach((i) => {
+
             
             const boxContainer = document.createElement("span");
             const divText = document.createElement("div");
             const img = document.createElement("img");
             const pName = document.createElement("p");
             const pLegend = document.createElement("p");
-                       
-            divText.appendChild(pName);
-            divText.appendChild(pLegend);
+            
+            musica.appendChild(boxContainer);
             boxContainer.appendChild(img);
             boxContainer.appendChild(divText);
-            musica.appendChild(boxContainer);
-            
+            divText.appendChild(pName);
+            divText.appendChild(pLegend);
+
             img.src = i.img;
             pName.innerText = i.nome;
             pLegend.innerText = i.legend;
@@ -41,9 +50,7 @@ function recieveData (data){
             
         });
         
-        selecao.appendChild(musica);
-        selecao.appendChild(titulo);
-              
+            
     });
     
 };
