@@ -36,17 +36,22 @@ function recieveData (data){
         
         for(let i = 0; i < 4; i++){
             
+            
+            const element = e.albuns[i];
+            
             const boxContainer = document.createElement("span");
             const divText = document.createElement("div");
             const img = document.createElement("img");
             const pName = document.createElement("p");
             const pLegend = document.createElement("p");
             
+            boxContainer.addEventListener("click", () => openMusic(e.albuns[i]))
+
             setInterval(()=>{
 
-                img.src = e.albuns[i].img;
-                pLegend.innerText = e.albuns[i].legend
-                pName.innerText = e.albuns[i].nome;
+                img.src = element.img;
+                pLegend.innerText = element.legend
+                pName.innerText = element.nome;
             },800)
 
             musica.appendChild(boxContainer);
@@ -54,20 +59,18 @@ function recieveData (data){
             boxContainer.appendChild(divText);
             divText.appendChild(pName);
             divText.appendChild(pLegend);
-
+            
 
         }
         
-        ShowAll.addEventListener("click", () => showGenero(e.albuns, e.titulo));
+        ShowAll.addEventListener("click", () => showGenero(e.albuns, e.titulo, ShowAll));
             
     });
     
 };
 
-function showGenero(playlist, showTitulo){
-    
+function showGenero(playlist, showTitulo, showall){
     clear()
-
     
     const selecao = document.querySelector("#selecao");
     const titulo = document.createElement("h2");
@@ -103,17 +106,60 @@ function showGenero(playlist, showTitulo){
 
         musica.classList.add("musica")
 
+        boxContainer.addEventListener("click", () => openMusic(element))
+
     },1000)
     window.scroll(0, 0)
     musica.style.flexWrap = "wrap"
     
 
 }
+
+function openMusic(music){
+
+    clear()
+
+    console.log(music)
+
+    const box = document.querySelector("#selectMusic");
+    const container = document.createElement("div");
+    const musica = document.createElement("span");
+    const img = document.createElement("img");
+    const name = document.createElement("p");
+    const playButton = document.createElement("div");
+    const barProg = document.createElement("div");
+    const barfill = document.createElement("div");
+
+    setInterval(()=> {
+        img.src = music.img;
+        name.innerText = music.nome;
+    
+        
+    }, 700)
+    playButton.classList.add("play");
+    barProg.classList.add("barprogress");
+    barfill.classList.add("barfill");
+    container.classList.add("container")
+
+    box.appendChild(container)
+    container.appendChild(musica)
+    barProg.appendChild(barfill);
+    musica.appendChild(img)
+    musica.appendChild(name);
+    musica.appendChild(playButton);
+    musica.appendChild(barProg);
+
+
+
+
+
+
+}
+getData();
+
+
 function clear(){
     const selecao = document.querySelector("#selecao")
 
     selecao.innerHTML =''
 }
-getData();
-
-

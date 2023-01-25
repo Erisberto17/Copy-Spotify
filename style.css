@@ -227,6 +227,111 @@ main section #selecao .musica span p:nth-child(1){
     
 }
 
+                /*   SELECT MUSIC   */
+
+
+
+
+
+
+
+
+
+
+
+
+main section .container{
+    margin-top: 5%;
+    border-radius: 10px ;
+    background-color: #222 ;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+main section .container span img{
+    width: 300px; height: 280px;
+    border-radius: 30px;
+    transition: .3s;
+}
+main section .container span p{
+    position: absolute;
+    top: 40px; left: 120px;
+    font-size: 30px;
+    color: whitesmoke ;
+    font-weight:500;
+    text-shadow: 1px 1px 0 rgb(30, 71, 48);
+    font-family:fantasy;
+    opacity: 0;
+    transition: 1s;
+    background:solid black;
+    
+}
+main section .container span:hover img{
+    filter: blur(.8px) drop-shadow(0 0 5px rgba(0, 0, 0, 0.432));
+}
+main section .container span:hover p{
+    opacity: .8;
+}
+main section .container span:hover .play{
+    transform: scale(1.1);
+    box-shadow: 0 1px 20px black;
+    background-color: rgba(223, 223, 223, 0.718)
+
+}main section .container span:hover .barprogress{
+    transform: scale(1.1);
+    box-shadow: 0 1px 20px black;
+    opacity: .9;
+
+}
+main section .container span .play{
+    top: 275px; left: 250px;
+    position: absolute;
+    background-color: none;
+    border-radius: 50%;
+    width: 40px; height: 40px;
+    transition: .4s;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}main section .container span .play::after{
+    content: "| |";
+}main section .container span .barprogress{
+    position: absolute;
+    left: 60px ; top: 290px;
+    width: 170px;
+    height: 14px;
+    background-color: rgb(60, 58, 58);
+    opacity: .2;
+    border-radius: 90px;
+    transition: .5s;
+}
+main section .container span .barprogress .barfill{
+    background-color: rgba(67, 85, 72, 0.762);
+    width: 40%;
+    height: 100%;
+    border-radius: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 /*   FOOTER   */
 footer{
